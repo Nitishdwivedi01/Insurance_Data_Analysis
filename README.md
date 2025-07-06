@@ -20,10 +20,15 @@ Insight Generation & Storytelling: Translated complex data patterns into clear, 
 Key Analytical Focus Areas:
 
 Sales Performance: Annual and quarterly sales trends, top-performing policy types, and premium contribution analysis.
+
 Sales Trends: Policy volume and premium generation by financial year, quarter, and policy type.
+
 Customer Profiling: Age, gender, and regional distribution of policyholders.
+
 Customer Behavior: Age and demographic segmentation, and their correlation with policy purchasing and claims.
+
 Channel Effectiveness: Performance evaluation of different sales channels.
+
 Claims Analysis: Identification of high-claim policy types and age groups to inform risk management strategies. Claim rates, average claim amounts, and identifying potential high-risk segments based on policy type and customer age.
 
 This project serves as a strong portfolio piece, showcasing my end-to-end analytical workflow, technical expertise across multiple tools, and ability to deliver data-driven insights critical for business growth and operational efficiency.
