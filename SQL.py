@@ -1,3 +1,6 @@
+
+# In this python file we will be writing the same code as SQL workbench but use python to run the query
+
 # Importing the required libraries
 # We can also use sqlite3 but I have used sqlalchamy because it is bit easy
 
