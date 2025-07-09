@@ -75,7 +75,7 @@ SELECT
         WHEN Customer_Age BETWEEN 35 AND 44 THEN '35-44'
         WHEN Customer_Age BETWEEN 45 AND 54 THEN '45-54'
         WHEN Customer_Age BETWEEN 55 AND 64 THEN '55-64'
-		WHEN Customer_Age BETWEEN 65 AND 74 THEN '65-74'
+	WHEN Customer_Age BETWEEN 65 AND 74 THEN '65-74'
         WHEN Customer_Age >= 75 THEN '70+'
     ELSE 'Unknown'
   END AS Age_Group,
@@ -127,7 +127,7 @@ ORDER BY Total_Premium;
 
 -- Identify which channels are most effective for specific policy types.
 select Sales_Channel, Policy_Type from ( select Policy_Type, Sales_Channel, count(*) as Policy_count, 
-ROW_NUMBER() over (Partition by Sales_Channel order by count(*) desc) as New  from insurance_policies group by Policy_Type, Sales_Channel) 
+ROW_NUMBER() over (Partition by Sales_Channel order by count(*) desc) as New from insurance_policies group by Policy_Type, Sales_Channel) 
 as Ranked where New = 1;
   
  
