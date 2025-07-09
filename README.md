@@ -9,7 +9,7 @@ As a Data Analyst, I led this project from data ingestion to actionable reportin
 
 Data Wrangling & Preprocessing (Python/Pandas): Implemented robust data cleaning, validation, and feature engineering techniques on a 50,000-row synthetic dataset to ensure data quality and readiness for analysis.
 
-Database Querying & Aggregation (SQL): Utilized SQL and Pandas to efficiently query, aggregate, and transform raw sales data, simulating data extraction from a relational database.
+Database Querying & Aggregation (SQL & Python): Utilized SQL and Pandas to efficiently query, aggregate, and transform raw sales data, simulating data extraction from a relational database.
 
 Exploratory Data Analysis (EDA) & Statistical Analysis (Python, Seaborn, Matplotlib, Pandas): Conducted in-depth EDA to uncover sales trends, customer demographics, and identify key drivers of premium generation and claims. Performed statistical tests and basic clustering for segment identification.
 
