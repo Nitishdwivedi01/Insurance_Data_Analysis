@@ -1,6 +1,6 @@
 # Insurance_Data_Analysis
 
-This project serves as a practical demonstration of data analysis skills, from raw data to insightful visualizations, making it a valuable addition to a data analyst's portfolio.
+This project serves as a practical demonstration of my data analysis skills, from raw data to insightful visualizations.
 This repository features a comprehensive Data Analysis Capstone Project designed to demonstrate proficiency in extracting, transforming, analyzing, and visualizing complex datasets to inform strategic business decisions. Focused on an insurance company's policy sales over the past three financial years, this project mirrors real-world analytical challenges.
 
 My Role & Core Skills Demonstrated:
@@ -9,9 +9,9 @@ As a Data Analyst, I led this project from data ingestion to actionable reportin
 
 Data Wrangling & Preprocessing (Python/Pandas): Implemented robust data cleaning, validation, and feature engineering techniques on a 50,000-row synthetic dataset to ensure data quality and readiness for analysis.
 
-Database Querying & Aggregation (SQL): Utilized SQL to efficiently query, aggregate, and transform raw sales data, simulating data extraction from a relational database.
+Database Querying & Aggregation (SQL): Utilized SQL and Pandas to efficiently query, aggregate, and transform raw sales data, simulating data extraction from a relational database.
 
-Exploratory Data Analysis (EDA) & Statistical Analysis (Python/Seaborn, Matplotlib): Conducted in-depth EDA to uncover sales trends, customer demographics, and identify key drivers of premium generation and claims. Performed statistical tests and basic clustering for segment identification.
+Exploratory Data Analysis (EDA) & Statistical Analysis (Python, Seaborn, Matplotlib, Pandas): Conducted in-depth EDA to uncover sales trends, customer demographics, and identify key drivers of premium generation and claims. Performed statistical tests and basic clustering for segment identification.
 
 Interactive Business Intelligence (Power BI): Developed dynamic and intuitive dashboards in Power BI, enabling stakeholders to interact with data, explore trends (e.g., sales growth, claim hotspots by age/policy type), and gain immediate business understanding.
 
@@ -21,7 +21,7 @@ Key Analytical Focus Areas:
 
 Sales Performance: Annual and quarterly sales trends, top-performing policy types, and premium contribution analysis.
 
-Sales Trends: Policy volume and premium generation by financial year, quarter, and policy type.
+Sales Trends: Policy volume and premium generation by financial year, quarter, policy type, and Sales Channels.
 
 Customer Profiling: Age, gender, and regional distribution of policyholders.
 
