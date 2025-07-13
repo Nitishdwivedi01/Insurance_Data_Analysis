@@ -318,6 +318,121 @@ FROM
     group by State order by Claim_Rate_Avg limit 10;
 
 
+-- Analyse the data on the basis of Months and Quarter.
+-- Quarters of FY 2022-23
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2022-23'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
+
+-- Quarter of FY 2023-24
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2023-24'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
+
+-- Quarter of FY 2024-25
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2024-25'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
+
+-- Monthly of FY 2022-23
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    Month(Sale_Date) AS 'Months',
+    monthname(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2022-23'
+GROUP BY Months , Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months ASC;
+
+-- Monthly of FY 2023-24
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    Month(Sale_Date) AS 'Months',
+    monthname(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2023-24'
+GROUP BY Months , Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months ASC;
+
+-- Monthly of FY 2024-25   
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    Month(Sale_Date) AS 'Months',
+    monthname(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2024-25'
+GROUP BY Months , Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months ASC;   
+
+-- Calculating monthly claim %age and the profit %age of all the FY 
+-- FY 2022-23
+SELECT 
+    SUM(Premium_Amount) AS 'Total_sales',
+    SUM(Claim_Amount) as 'Total_claim',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    MONTHNAME(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2022-23'
+GROUP BY Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months_Name ASC;   
+
+-- FY 2023-24
+SELECT 
+    SUM(Premium_Amount) AS 'Total_sales',
+    SUM(Claim_Amount) as 'Total_claim',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    MONTHNAME(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2023-24'
+GROUP BY Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months_Name ASC;   
+    
+-- FY 2024-25
+SELECT 
+    SUM(Premium_Amount) AS 'Total_sales',
+    SUM(Claim_Amount) as 'Total_claim',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    MONTHNAME(Sale_Date) AS 'Months_Name',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2024-25'
+GROUP BY Financial_Year, Months_Name
+ORDER BY Financial_Year ASC , Months_Name ASC;
+
+
+
 
 
 
@@ -329,3 +444,5 @@ FROM
     
     
     
+
+
