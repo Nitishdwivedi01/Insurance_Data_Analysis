@@ -431,7 +431,47 @@ FROM
 GROUP BY Financial_Year, Months_Name
 ORDER BY Financial_Year ASC , Months_Name ASC;
 
+-- Calculating Quarterly claim %age and the profit %age of all the FY
+-- Quarters of FY 2022-23
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2022-23'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
 
+-- Quarter of FY 2023-24
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2023-24'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
+
+-- Quarter of FY 2024-25
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    CONCAT('Q', QUARTER(Sale_Date)) AS 'Quarters',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    Financial_Year
+FROM
+    insurance_policies
+    where Financial_Year = 'FY2024-25'
+GROUP BY Quarters , Financial_Year
+ORDER BY Financial_Year ASC , Quarters ASC;
+    
+    
 
 
 
