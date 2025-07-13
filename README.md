@@ -33,3 +33,4 @@ Claims Analysis: Identification of high-claim policy types and age groups to inf
 
 This project serves as a strong portfolio piece, showcasing my end-to-end analytical workflow, technical expertise across multiple tools, and ability to deliver data-driven insights critical for business growth and operational efficiency.
 
+
