@@ -1,5 +1,5 @@
-create database insurance_data_analysis;
-use insurance_data_analysis
+CREATE database insurance_data_analysis;
+USE insurance_data_analysis;
 
 CREATE TABLE insurance_policies (
     Policy_ID VARCHAR(20),
@@ -27,7 +27,7 @@ CREATE TABLE insurance_policies (
 
 -- Used python to upload data in the data base and now we will preform our queries 
 -- Test query
-select * from insurance_policies limit 20;
+SELECT * FROM insurance_policies limit 20;
 
 -- Now we will work with the questions and the queries
 -- Count of policies that has been claimed and not claimed in all the states 
@@ -471,8 +471,17 @@ FROM
 GROUP BY Quarters , Financial_Year
 ORDER BY Financial_Year ASC , Quarters ASC;
     
-    
-
+-- Total claim %age and the profit %age of all the Financila years.
+SELECT 
+    SUM(Premium_Amount) AS 'Total sales',
+    SUM(Claim_Amount) AS 'Total Claim',
+    ROUND((SUM(Claim_Amount)/SUM(Premium_Amount))*100,2) as 'Claim_%age',
+    ROUND((SUM(Premium_Amount) - SUM(Claim_Amount)) / SUM(Premium_Amount) * 100, 2) as 'Profit_%age',
+    Financial_Year
+FROM
+    insurance_policies
+GROUP BY Financial_Year
+ORDER BY Financial_Year;
 
 
 
