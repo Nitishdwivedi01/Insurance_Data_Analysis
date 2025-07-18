@@ -9,18 +9,21 @@ import mysql.connector
 from sqlalchemy import create_engine
 
 # reading the csv file and using it to upload data in the db
-csv_file_path = r"C:\Users\Nitish kumar\PyCharmMiscProject\Insurance data analysis\Insurance_sales_data.csv"
+csv_file_path = r"* Give file path \ Insurance_sales_data.csv"
 df = pd.read_csv(csv_file_path)
 
 # MySQL connection details which the pandas will use to connect with the DB
 username = "root"
-password = "Mysql%4012345"
+password = "Password%4012345" # %40 indicates '@'
 host = "localhost"
 database = "insurance_data_analysis"
 
 engine = create_engine(f"mysql+mysqlconnector://{username}:{password}@{host}/{database}")
 
 # Uploading the data from csv to MySQL table (append mode)
+# Before executing this code create table using SQL
+# Do not run this code multiple times it will create duplicate data in database.
+
 # df.to_sql(
 #     name="insurance_policies",  # table name, before uploading the data make sure you have table
 #     con=engine,
@@ -28,7 +31,7 @@ engine = create_engine(f"mysql+mysqlconnector://{username}:{password}@{host}/{da
 #     index=False
 # )
 print("✅ Data uploaded successfully!")
-print('Ready to run Queries:- \n')
+print('Ready to run Queries:- \n !!! CAUTION NOT RUN THIS CODE AGAIN !!!\n')
 
 #  We have to create table, and database in sql so that we can specify it while uploading the data
 
