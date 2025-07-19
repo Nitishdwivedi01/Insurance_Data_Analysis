@@ -620,3 +620,41 @@ print(pivot)
 pivot2 = summary.pivot(index='Financial_Year', columns='Financial_Quarter', values='Total_Policies')
 print("\nTotal policies by Financial Year & Quarter:")
 print(pivot2)
+
+# Monthly sales of policies and the total premium collected from them.
+
+df['Month_Name']= df['Sale_Date'].dt.strftime('%B')
+df['Month_Num']= df['Sale_Date'].dt.month
+
+Month_sales = df.groupby(['Month_Name', 'Financial_Year','Month_Num']).agg(
+    Total_Policies = ('Policy_ID','count'),
+    Total_Premium = ('Premium_Amount','sum'),
+    Total_Claim = ('Claim_Amount','sum')
+).reset_index()
+print(Month_sales)
+
+Month_sales = Month_sales.sort_values('Month_Num')
+FY = Month_sales['Financial_Year'].unique()
+
+for f in FY:
+    data = Month_sales[Month_sales['Financial_Year']== f]
+
+    plt.figure(figsize=(15, 10))
+    plt.subplot(2, 1, 1)
+    sns.lineplot(y='Total_Policies', x='Month_Name', data=data, marker='o', color='green')
+    plt.xlabel('Months')
+    plt.ylabel('Total Policies sold')
+    plt.xticks(rotation=45)
+    plt.title(f'Total Policies sold over months in {f}')
+    plt.grid(True, linestyle='--', alpha=0.7)
+
+    plt.subplot(2, 1, 2)
+    sns.lineplot(y='Total_Premium', x='Month_Name', data=data, marker='o', color='green')
+    plt.xlabel('Months')
+    plt.ylabel('Total Premium')
+    plt.xticks(rotation=45)
+    plt.title(f'Total Premium collected over months in {f}')
+    plt.tight_layout()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.show()
+
