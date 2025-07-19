@@ -500,7 +500,12 @@ plt.tight_layout()
 plt.show()
 
 # Analysis on the basis of Quarters and Financial years
-
+# Defining the function for financial years
+def get_financial_year(date):
+    if date.month >= 4:
+        return f"{date.year}-{date.year + 1}"
+    else:
+        return f"{date.year - 1}-{date.year}"
 df['Financial_Year'] = df['Sale_Date'].apply(get_financial_year)
 
 # Defining Quarters
