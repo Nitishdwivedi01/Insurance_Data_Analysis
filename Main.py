@@ -499,14 +499,8 @@ plt.title('Premium to claim ratio vs. State')
 plt.tight_layout()
 plt.show()
 
-## Analysis on the basis of Quarters and Financial years
+# Analysis on the basis of Quarters and Financial years
 
-# Defining the function for financial years
-def get_financial_year(date):
-    if date.month >= 4:
-        return f"{date.year}-{date.year + 1}"
-    else:
-        return f"{date.year - 1}-{date.year}"
 df['Financial_Year'] = df['Sale_Date'].apply(get_financial_year)
 
 # Defining Quarters
@@ -621,14 +615,3 @@ print(pivot)
 pivot2 = summary.pivot(index='Financial_Year', columns='Financial_Quarter', values='Total_Policies')
 print("\nTotal policies by Financial Year & Quarter:")
 print(pivot2)
-
-
-
-
-
-
-
-
-
-
-
