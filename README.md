@@ -31,6 +31,8 @@ Channel Effectiveness: Performance evaluation of different sales channels.
 
 Claims Analysis: Identification of high-claim policy types and age groups to inform risk management strategies. Claim rates, average claim amounts, and identifying potential high-risk segments based on policy type and customer age.
 
+A PowerPoint presentation summarizing key findings and visual insights from the dataset is included in the IDA_PPT pdf file. It showcases data trends, claim patterns, and policy analysis using clean and insightful charts. This serves as a quick overview of the project’s outcomes and supports better understanding for non-technical viewers.
+
 This project serves as a strong portfolio piece, showcasing my end-to-end analytical workflow, technical expertise across multiple tools, and ability to deliver data-driven insights critical for business growth and operational efficiency.
 
 
